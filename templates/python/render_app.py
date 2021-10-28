@@ -10,7 +10,7 @@ from PIL import Image, ImageTk
 class RenderApp:
     def __init__(self, draw_function, width, height, result_file=None):
         self.draw_function = draw_function
-        self.root = tk.Tk("Ray Tracing")
+        self.root = tk.Tk()
 
         self.array = np.zeros([400, 600, 3]).astype(np.uint8)
         self.img = ImageTk.PhotoImage(image=Image.fromarray(self.array))
