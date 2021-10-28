@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include "util.h"
 #include "window.h"
 #include "vectors.h"
