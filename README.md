@@ -18,3 +18,12 @@ pip3 install numba
 pip3 install scikit-image
 pip3 install matplotlib
 pip3 install pillow
+
+
+CPP
+
+
+sudo apt-get install libgl1-mesa-dev
+sudo apt-get install libglfw3-dev
+sudo apt-get install libglew-dev
+
