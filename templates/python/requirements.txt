@@ -1,0 +1,6 @@
+pillow
+numpy
+scikit-image
+matplotlib
+numba
+tk
