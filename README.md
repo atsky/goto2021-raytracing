@@ -35,7 +35,11 @@ TODO
 
 ## CPP
 
-`templates/python`
+`templates/cpp`
+
+### Windows
+
+### Ubuntu Linux
 
 
 ```
@@ -43,3 +47,7 @@ sudo apt-get install libgl1-mesa-dev
 sudo apt-get install libglfw3-dev
 sudo apt-get install libglew-dev
 ```
+
+### MacOS
+
+TODO
