@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+
 #include "util.h"
 #include "window.h"
 #include "vectors.h"
@@ -57,6 +58,6 @@ public:
 
 
 int main() {
-    run(make_shared<my_ray_tracer>());
+    run(make_shared<my_ray_tracer>(), 600, 400);
 }
 

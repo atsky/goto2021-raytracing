@@ -114,7 +114,7 @@ namespace {
                                          "}";
 
 // The MAIN function, from here we start the application and run the game loop
-    int run_it(std::shared_ptr<abstract_ray_tracer> ray_tracer) {
+    int run_it(std::shared_ptr<abstract_ray_tracer> ray_tracer, int width, int height) {
         std::cout << "Starting GLFW context, OpenGL 3.3" << std::endl;
         // Init GLFW
         if (!glfwInit()) {
@@ -233,7 +233,7 @@ namespace {
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-        rasterizer rasterizer(300, 200, ray_tracer);
+        rasterizer rasterizer(width, height, ray_tracer);
 
         // render loop
         // -----------
@@ -283,8 +283,8 @@ namespace {
     }
 }
 
-int run(std::shared_ptr<abstract_ray_tracer> ray_tracer) {
-    return run_it(ray_tracer);
+int run(std::shared_ptr<abstract_ray_tracer> ray_tracer, int width, int height) {
+    return run_it(ray_tracer, width, height);
 }
 
 #endif //RAYTRACING_WINDOW_H
