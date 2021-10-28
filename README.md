@@ -9,6 +9,11 @@
 https://github.com/atsky/goto2021-raytracing/tree/main/templates/python
 
 Для удобства лучше использовать питон с tkinter
+### Windows
+
+Удобнее установить пакеты с использованием https://docs.conda.io/en/latest/miniconda.html
+
+
 
 ### Ubuntu Linux
 ```
@@ -23,6 +28,10 @@ pip3 install scikit-image
 pip3 install matplotlib
 pip3 install pillow
 ```
+
+### MacOS
+
+TODO
 
 ## CPP
 
