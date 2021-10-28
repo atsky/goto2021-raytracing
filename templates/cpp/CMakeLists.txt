@@ -30,11 +30,12 @@ message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
 find_package(GLEW REQUIRED)
 message(STATUS "Found GLEW in ${GLEW_INCLUDE_DIR}")
 
-target_link_libraries(raytracing OpenGL)
 target_link_libraries(raytracing glfw)
 target_link_libraries(raytracing GLEW)
 
-# mac, it's important to take this step
 if (APPLE)
+    # mac, it's important to take this step
     target_link_libraries(raytracing "-framework OpenGL")
+else()
+    target_link_libraries(raytracing OpenGL)
 endif()
