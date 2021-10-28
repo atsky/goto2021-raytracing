@@ -13,7 +13,10 @@ https://github.com/atsky/goto2021-raytracing/tree/main/templates/python
 
 Удобнее установить пакеты с использованием https://docs.conda.io/en/latest/miniconda.html
 
-
+```
+conda install numba
+conda install numpy
+```
 
 ### Ubuntu Linux
 ```
