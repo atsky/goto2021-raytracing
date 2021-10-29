@@ -6,29 +6,25 @@
 
 ## Python
 
-https://github.com/atsky/goto2021-raytracing/tree/main/templates/python
+https://github.com/atsky/goto2021-raytracing/tree/main/template-python
 
+Для установки билиотек рекомендуется использовать miniconda 
+https://docs.conda.io/en/latest/miniconda.htm
+
+
+### Windows
+Можно восстановить среду из файла `environment.yml`
 ```
-cd templates/python
+cd template-python
 conda env create -f environment.yml
 ```
-
+Или просто установить нужные пакеты
 ```
 conda install numpy numba matplotlib scikit-image
 ```
 
 ```
 python main.py
-```
-
-Для удобства лучше использовать питон с tkinter
-### Windows
-
-Удобнее установить пакеты с использованием https://docs.conda.io/en/latest/miniconda.html
-
-```
-conda install numba
-conda install numpy
 ```
 
 ### Ubuntu Linux
@@ -47,13 +43,28 @@ pip3 install pillow
 
 ### MacOS
 
-TODO
+Можно восстановить среду из файла `environment.yml`
+```
+cd template-python
+conda env create -f environment.yml
+```
+Или просто установить нужные пакеты
+```
+conda install numpy numba matplotlib scikit-image
+```
+
+```
+python main.py
+```
+
 
 ## CPP
+Шаблон для С++ находится тут. 
+https://github.com/atsky/goto2021-raytracing/tree/main/template-cpp
 
-`templates/cpp`
-
+Для его работы нужен OpenGL. Инструкции по установке
 ### Windows
+TODO
 
 ### Ubuntu Linux
 
