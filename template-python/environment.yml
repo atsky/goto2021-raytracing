@@ -84,6 +84,7 @@ dependencies:
   - tk=8.6.11=h7bc2e8c_0
   - toolz=0.11.1=pyhd3eb1b0_0
   - tornado=6.1=py39h9ed2024_0
+  - tqdm=4.62.3=pyhd3eb1b0_1
   - tzdata=2021e=hda174b7_0
   - wheel=0.37.0=pyhd3eb1b0_1
   - xz=5.2.5=h1de35cc_0
