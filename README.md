@@ -8,6 +8,19 @@
 
 https://github.com/atsky/goto2021-raytracing/tree/main/templates/python
 
+```
+cd templates/python
+conda env create -f environment.yml
+```
+
+```
+conda install numpy numba matplotlib scikit-image
+```
+
+```
+python main.py
+```
+
 Для удобства лучше использовать питон с tkinter
 ### Windows
 
