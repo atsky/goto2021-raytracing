@@ -12,8 +12,10 @@ link_directories(/usr/local/lib)
 add_executable(raytracing
         main.cpp
         vectors.h
-        window.h
-        util.h)
+        stb_image.h
+        stb_image_write.h
+        util.h
+        window.h)
 
 # OpenGL
 find_package(OpenGL REQUIRED)
