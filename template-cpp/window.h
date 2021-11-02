@@ -4,8 +4,11 @@
 #include <iostream>
 
 #define STB_IMAGE_IMPLEMENTATION
+#define STB_IMAGE_WRITE_IMPLEMENTATION
 
 #include "stb_image.h"
+#include "stb_image_write.h"
+
 // GLEW
 #define GLEW_STATIC
 
@@ -15,6 +18,7 @@
 #include <GLFW/glfw3.h>
 
 #include "vectors.h"
+#include "util.h"
 
 class abstract_ray_tracer {
 public:
@@ -26,11 +30,6 @@ public:
 };
 
 namespace {
-    inline double clamp(double x, double min, double max) {
-        if (x < min) return min;
-        if (x > max) return max;
-        return x;
-    }
 
     class rasterizer {
 
@@ -283,7 +282,7 @@ namespace {
     }
 }
 
-int run(std::shared_ptr<abstract_ray_tracer> ray_tracer, int width, int height) {
+int render(std::shared_ptr<abstract_ray_tracer> ray_tracer, int width, int height) {
     return run_it(ray_tracer, width, height);
 }
 

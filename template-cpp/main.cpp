@@ -57,7 +57,31 @@ public:
 };
 
 
-int main() {
-    run(make_shared<my_ray_tracer>(), 600, 400);
+int render_simp(std::shared_ptr<abstract_ray_tracer> ray_tracer, size_t width, size_t height) {
+    unsigned char *image_data = new unsigned char[width * height * 3];
+
+    const size_t channels = 3;
+    for (int j = 0; j < height; j++) {
+        for (int i = 0; i < width; i++) {
+            vec3 color = ray_tracer->get_pixel_color(i, j, width, height);
+            int t = i + j * width;
+            image_data[t * 3] = static_cast<int>(255.999 * clamp(color.x(), 0, 1));
+            image_data[t * 3 + 1] = static_cast<int>(255.999 * clamp(color.y(), 0, 1));
+            image_data[t * 3 + 2] = static_cast<int>(255.999 * clamp(color.z(), 0, 1));
+        }
+    }
+
+    stbi_write_png("/Users/atsky/work/goto2021-raytracing/template-cpp/image.png", width, height, channels, image_data, width * channels);
+    return 0;
 }
 
+int main() {
+    render_simp(make_shared<my_ray_tracer>(), 600, 400);
+    return 0;
+}
+
+/*
+int main() {
+    render(make_shared<my_ray_tracer>(), 600, 400);
+}
+*/
