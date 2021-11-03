@@ -30,7 +30,7 @@ def get_pixel_color(x, y, width, height):
     for i in range(1, MAX_ITER):
         if abs(z) > 2:
             return rgb_conv(i)
-        z = z * z + c
+        z *= z + c
 
     return np.array([0.0, 0.0, 0.0])
 
