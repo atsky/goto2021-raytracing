@@ -28,14 +28,12 @@ def sky_color(v):
     return (1.0 - t) * vec3(1.0, 1.0, 1.0) + t * vec3(0.5, 0.7, 1.0)
 
 
-def get_pixel_color(i, j, width, height):
-    #
-    x = 2.0 * i / width - 1.0
-    y = 2.0 * j / height - 1.0
+def get_ray(i, j, width, height):
+    pass
 
-    origin = None
-    screen_point = None
-    direction = None
+
+def get_pixel_color(i, j, width, height):
+    origin, direction = get_ray(i, j, width, height)
 
     return sky_color(direction)
 
