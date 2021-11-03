@@ -71,7 +71,7 @@ int render_simp(std::shared_ptr<abstract_ray_tracer> ray_tracer, size_t width, s
         }
     }
 
-    stbi_write_png("/Users/atsky/work/goto2021-raytracing/template-cpp/image.png", width, height, channels, image_data, width * channels);
+    stbi_write_png("image.png", width, height, channels, image_data, width * channels);
     return 0;
 }
 
