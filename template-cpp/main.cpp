@@ -1,8 +1,13 @@
 #include <iostream>
 #include <memory>
 
+#define STB_IMAGE_IMPLEMENTATION
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+
+#include "stb_image.h"
+#include "stb_image_write.h"
+
 #include "util.h"
-#include "window.h"
 #include "vectors.h"
 
 using std::shared_ptr;
@@ -79,9 +84,3 @@ int main() {
     render_simp(make_shared<my_ray_tracer>(), 600, 400);
     return 0;
 }
-
-/*
-int main() {
-    render(make_shared<my_ray_tracer>(), 600, 400);
-}
-*/

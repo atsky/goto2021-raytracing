@@ -20,15 +20,6 @@
 #include "vectors.h"
 #include "util.h"
 
-class abstract_ray_tracer {
-public:
-    virtual void reset(int width, int height) {
-
-    }
-
-    virtual vec3 get_pixel_color(int i, int j, int image_width, int image_height) = 0;
-};
-
 namespace {
 
     class rasterizer {

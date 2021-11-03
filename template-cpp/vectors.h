@@ -98,4 +98,13 @@ inline vec3 normalize(vec3 v) {
     return v / v.length();
 }
 
+class abstract_ray_tracer {
+public:
+    virtual void reset(int width, int height) {
+
+    }
+
+    virtual vec3 get_pixel_color(int i, int j, int image_width, int image_height) = 0;
+};
+
 #endif //RAYTRACING_VECTORS_H
