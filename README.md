@@ -8,8 +8,7 @@
 https://github.com/atsky/goto2021-raytracing/tree/main/template-python
 
 Для установки билиотек рекомендуется использовать miniconda 
-https://docs.conda.io/en/latest/miniconda.htm
-
+https://docs.conda.io/en/latest/miniconda.html
 
 ### Windows
 Можно восстановить среду из файла `environment.yml`
